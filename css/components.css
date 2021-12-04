@@ -1,0 +1,410 @@
+/** ---------- Menu ---------- */
+/*! Change the color of the navbar */
+.menu-BTN{
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    background-color: var(--purple);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+.menu{
+    position: fixed;
+    left: 0;
+    bottom: 4rem;
+    width: 100%;
+    height: calc(100% - 4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--black);
+    transform: translate(-100%,0);
+    transition: transform .3s ease;
+}
+.menu a{
+    font-size: 1rem;
+    padding: 1rem;
+    text-decoration: none;
+    text-align: center;
+    color: var(--white);
+}
+.menu a:hover{
+    background-color: var(--purple-alpha);
+}
+
+.display{
+    transform: translate(0,0);
+}
+
+/* *---------- Home image ---------- */
+.imageHome{
+    background-image: url(../assets/bg-Image.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    animation-name: bgImage;
+    animation-duration: 3s;
+}
+.imageHome-opacity{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black-alpha);
+}
+.homeContent{
+    color: var(--white);
+    line-height: 1;
+}
+.homeContent > .title{
+    font-size: 3rem;
+    margin: 0;
+}
+.homeContent > .subtitle{
+    font-size: 2rem;
+    margin: 0 0 .3rem 0;
+    color: var(--purple);
+}
+
+.subtitle, .title span{
+    animation: titleAnimation 5s linear infinite;
+}
+.subtitle,.title span:nth-child(even){
+    animation-delay: 0.4s;
+}
+
+/* *---------- Slogan ---------- */
+.about > *{
+    text-align: center;
+}
+.skillsIcons svg{
+    margin: 1rem;
+    width: 4rem;
+    height: 4rem;
+}
+h1,h5{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.bordersTB{
+    border-top: thin solid var(--black);
+    border-bottom: thin solid var(--black);
+}
+
+/** ---------- Projects ---------- */
+.projects{
+    text-align: center;
+    background-color: var(--white);
+}
+.projects h2{
+    display: inline-block;
+}
+
+/** ---------- Cards ---------- */
+
+.portafolio-card{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+.portafolio-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.portafolioCard-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--purple-alpha);
+    color: var(--black);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease;
+}
+.portafolioCard-info h3{
+    margin: 0;
+}
+.portafolioCard-info p{
+    text-align: justify;
+    font-size: 11px;
+}
+.portafolioCard-info > div{
+    padding: 1rem;
+    border: thin solid var(--black);
+    width: 100%;
+    height: 100%;
+}
+
+.portafolio-card:hover .portafolioCard-info{
+    opacity: 1;
+    pointer-events: auto;
+}
+.btn-moreInfo{
+    border: none !important;
+    color: var(--black) !important;
+    cursor: pointer;
+}
+
+/** ---------- Contact ---------- */
+.contact-cards{
+    width: 100%;
+    padding: 1rem;
+}
+.contact-card{
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    box-shadow: 10px 10px 5px 0px rgba(25,25,25,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(25,25,25,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(25,25,25,0.75);
+}
+.contact-card a{
+    all: unset;
+    cursor: pointer;
+}
+.contact-card  svg{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.contact-form{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    box-shadow: 10px 10px 5px 0px rgba(25,25,25,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(25,25,25,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(25,25,25,0.75);
+}
+
+.contact-form input{
+    box-sizing: border-box;
+    height: 2rem;
+    padding: .5rem .2rem;
+    border: none;
+    border-bottom: thin solid var(--black);
+    background-color: inherit;
+    outline: none;
+}
+.contact-form textarea{
+    width: 100%;
+    margin-top: 1rem;
+    resize: none;
+    border: thin solid var(--black);
+    background-color: inherit;
+    outline: none;
+}
+
+.formBTN{
+    margin-top: 1.5rem;
+    border: none;
+    color: var(--black) !important;
+    cursor: pointer;
+}
+
+.copyright{
+    height: 3rem;
+    background-color: var(--purple);
+    text-align: center;
+    margin: 4rem auto;
+    padding-top: 1rem;
+    color: var(--black);
+    font-weight: bold;
+}
+.copyright > p{
+    margin: 0;
+}
+
+.clickDiv{
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/** ---------- Ventana Modal ---------- */
+.modalContainer{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: var(--black-alpha);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.modal{
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--white);
+    padding:1rem;
+}
+.modal img{
+    width: 100%;
+}
+.modalInfo{
+    padding: 1rem;
+}
+.modalInfo h3{
+    text-align: center;
+    padding: .3rem 0;
+    border-top: thin solid var(--black);
+    border-bottom: thin solid var(--black);
+}
+.btn-Close{
+    border: none;
+    cursor: pointer;
+    background-color: var(--purple);
+    padding: .3rem;
+    color: var(--black);
+    margin-left: 85%;
+}
+
+/** ---------- Media Queries ---------- */
+@media screen and (min-width: 768px) {
+    .menu a{
+        font-size:1.5rem;
+    }
+    .homeContent > .title{
+        font-size: 4rem;
+        margin: 0;
+    }
+    .homeContent > .subtitle{
+        font-size: 3rem;
+        margin: 0 0 .3rem 0;
+    }
+    .biography{
+        text-align: justify;
+    }
+    .projectImages{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+    }
+    .contact-cards{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+    }
+    .contact-form{
+        width: 80%;
+    }
+    .modal{
+        display: flex;
+    }
+    .modal img{
+        width: 50%;
+    }
+    .modalInfo{
+        width: 50%;
+    }
+    .modalInfo h3{
+        margin: 0 auto;
+    }
+    .btn-Close{
+        height: 30px;
+        margin: -2.1% -2.1% 0 0;
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    .menu-BTN{
+        display: none;
+    }
+    .menu{
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        transform: translate(0,0);
+        background-color: transparent;
+    }
+    .menu a{
+        font-size: 1rem;
+        padding: .5rem 1rem;
+        transition: all .3s ease;
+    }
+    .menu a:hover{
+        color: var(--black);
+        font-size: 1.3rem;
+    }
+    .homeContent > .title{
+        font-size: 6rem;
+        margin: 0;
+    }
+    .homeContent > .subtitle{
+        font-size: 4rem;
+        margin: 0 0 .3rem 0;
+    }
+    .about{
+        display: flex;
+    }
+    .about > article{
+        width: 50%;
+    }
+    .biography{
+        text-align: justify;
+    }
+    .titleSkills{
+        margin-top: .5rem;
+    }
+    .projectImages{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .contact-cards{
+        display: flex;
+    }
+    .contact-card{
+        width: 25%;
+    }
+    .copyright{
+        margin-bottom: 0;
+    }
+    .contact-form{
+        width: 50%;
+    }
+}
+
+/** ---------- Animaciones ---------- */
+@keyframes bgImage{
+    0%{
+        background-position: 0% 0%;
+    }
+    50%{
+        background-position: 100% 100%;
+    }
+    100%{
+        background-position: center;
+    }
+}
+
+@keyframes titleAnimation{
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%{
+        color: var(--purple);
+        text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,100%{
+        color: var(--white);
+        text-shadow: 0 0 10px var(--purple-alpha),
+        0 0 20px var(--purple-alpha),
+        0 0 40px var(--purple-alpha),
+        0 0 80px var(--purple-alpha),
+        0 0 160px var(--purple-alpha),
+        0 0 400px var(--purple-alpha);
+    }
+}
